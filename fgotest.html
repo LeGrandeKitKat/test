@@ -124,7 +124,7 @@
       };
       reader.readAsDataURL(file);
     }
-    function put_text(canvas, content, Hero_class, Hero_name, CE) {
+    function put_text(canvas, content, Hero_class, Hero_name, Hero_name_2, CE) {
       let ATK = document.getElementById("ATK").value || 0;
       let HP = document.getElementById("HP").value || 0;
       let y = [727, 732, 753, 830];
@@ -143,9 +143,9 @@
       content.font = "22px FGO";
       content.strokeStyle = "black";
       content.lineWidth = 3;
-      content.strokeText(Hero_name_2,250,y[2]);
+      content.strokeText(Hero_name_2,250,y[1]);
       content.fillStyle = "white";
-      content.fillText(Hero_name_2,250,y[2]);
+      content.fillText(Hero_name_2,250,y[1]);
             
       content.font = "22px FGO";
       content.strokeStyle = "black";
@@ -239,7 +239,7 @@
       } else {
         const Hero_class = document.getElementById("CE_subname").value || "Unknown";
         const Hero_name = document.getElementById("CE_name_1").value || "Unknown";
-	const Hero_name_2 = document.getElementById("CE_name_1").value || "Unknown";
+	      const Hero_name_2 = document.getElementById("CE_name_2").value || "Unknown";
         img_frame.src = "img/fgo/CE" + Hero_rarity + ".png";
         preLoadImg(img_frame.src);
         img_frame.onload = function()
