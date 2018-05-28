@@ -124,7 +124,7 @@
       };
       reader.readAsDataURL(file);
     }
-    function put_text(canvas, content, Hero_class, Hero_name, Hero_name_2, CE) {
+    function put_text(canvas, content, Hero_class, Hero_class_2, Hero_name, CE) {
       let ATK = document.getElementById("ATK").value || 0;
       let HP = document.getElementById("HP").value || 0;
       let y = [727, 732, 753, 830];
@@ -140,12 +140,13 @@
       content.fillStyle = "white";
       content.fillText(Hero_class,250,y[0]);
 
-      content.font = "22px FGO";
+      content.textAlign = "center";
+      content.font = "50px FGO";
+      content.lineWidth = 4;
       content.strokeStyle = "black";
-      content.lineWidth = 3;
-      content.strokeText(Hero_name_2,250,y[1]);
+      content.strokeText(Hero_class_2,250,y[-2]);
       content.fillStyle = "white";
-      content.fillText(Hero_name_2,250,y[1]);
+      content.fillText(Hero_class_2,250,y[-2]);
             
       content.font = "22px FGO";
       content.strokeStyle = "black";
@@ -239,7 +240,7 @@
       } else {
         const Hero_class = document.getElementById("CE_subname").value || "Unknown";
         const Hero_name = document.getElementById("CE_name_1").value || "Unknown";
-	      const Hero_name_2 = document.getElementById("CE_name_2").value || "Unknown";
+        const Hero_name_2 = document.getElementById("CE_name_2").value || "Unknown";
         img_frame.src = "img/fgo/CE" + Hero_rarity + ".png";
         preLoadImg(img_frame.src);
         img_frame.onload = function()
@@ -290,8 +291,8 @@
       <div>
         Name<br><br>
         <input type = "text" id = "CE_name_1" placeholder = "Name 1" style = "max-width:250px; width: 100%"><br><br>
-        Sub Name<br>
-	<input type = "text" id = "CE_name_2" placeholder = "Name 2" style = "max-width:250px; width: 100%"><br><br>
+        <input type = "text" id = "CE_name_2" placeholder = "Name 2" style = "max-width:250px; width: 100%"><br><br>
+
         Sub Name<br><br>
         <input type = "text" id = "CE_subname" placeholder = "Class Name" style = "max-width:250px; width: 100%"><br><br>
       </div>
