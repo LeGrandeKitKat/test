@@ -234,7 +234,7 @@
             content.drawImage(img_logo,...icon_pos[Hero_class],76,76);
             Hero_class = Hero_class.slice(0, 1).toUpperCase() + Hero_class.slice(1);
             Hero_class = document.getElementById("Hero_subname").value || Hero_class;
-            put_text(canvas, content, Hero_class, Hero_name, false);
+            put_text(canvas, content, Hero_class, Hero_name, Hero_class_2, false);
           };
         }
       } else {
@@ -247,7 +247,7 @@
         {
           content.drawImage(img_hero,0,0,500,850);
           content.drawImage(img_frame,0,0,500,850);
-          put_text(canvas, content, Hero_name, Hero_class, true);
+          put_text(canvas, content, Hero_name, Hero_class, Hero_class_2, true);
         }
       }
 
