@@ -127,7 +127,7 @@
     function put_text(canvas, content, Hero_class, Hero_name, Hero_class_2, CE) {
       let ATK = document.getElementById("ATK").value || 0;
       let HP = document.getElementById("HP").value || 0;
-      let y = [727, 687, 732, 753, 830];
+      let y = [727, 684, 732, 753, 830];
       if (CE) {
         ATK = "+" + ATK;
         HP = "+" + HP;
@@ -151,14 +151,14 @@
       content.font = "22px FGO";
       content.strokeStyle = "black";
       content.lineWidth = 3;
-      content.strokeText(Hero_name,250,y[2]);
+      content.strokeText(Hero_name,250,y[3]);
       content.fillStyle = "white";
-      content.fillText(Hero_name,250,y[2]);
+      content.fillText(Hero_name,250,y[3]);
 
       content.font = "50px FGO";
       content.strokeStyle = "black";
       content.strokeText(ATK,130,y[3]);
-      let my_gradient = content.createLinearGradient(0,y[3] - 50 ,0,y[3]);
+      let my_gradient = content.createLinearGradient(0,y[4] - 50 ,0,y[4]);
       if (!CE && !document.getElementById('gold').checked) {
         my_gradient.addColorStop(0.5,"#ffeb04");
         my_gradient.addColorStop(0.6,"#b1a300");
@@ -170,12 +170,12 @@
         my_gradient.addColorStop(1,"white");
       }
       content.fillStyle = my_gradient;
-      content.fillText(ATK,130,y[3]);
+      content.fillText(ATK,130,y[4]);
 
       content.strokeStyle = "black";
-      content.strokeText(HP,370,y[3]);
+      content.strokeText(HP,370,y[4]);
       content.fillStyle = my_gradient;
-      content.fillText(HP,370,y[3]);
+      content.fillText(HP,370,y[4]);
 
       dataURL = canvas.toDataURL();
       document.getElementById('pic_show').src = dataURL;
