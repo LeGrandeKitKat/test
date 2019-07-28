@@ -234,7 +234,7 @@
             content.drawImage(img_logo,...icon_pos[Hero_class],76,76);
             Hero_class = Hero_class.slice(0, 1).toUpperCase() + Hero_class.slice(1);
             Hero_class = document.getElementById("Hero_subname").value || Hero_class;
-            put_text(canvas, content, Hero_class, Hero_name, Hero_class_2, false);
+            put_text(canvas, content, Hero_class, Hero_name, false);
           };
         }
       } else {
@@ -277,6 +277,11 @@
       <option value = "3">3 ☆</option>
       <option value = "4">4 ☆</option>
       <option value = "5">5 ☆</option>
+      <option value = "6">Command Cast 1 ☆</option>
+      <option value = "7">Command Cast 2 ☆</option>
+      <option value = "8">Command Cast 3 ☆</option>
+      <option value = "9">Command Cast 4 ☆</option>
+      <option value = "10">Command Cast 5 ☆</option>
     </select><br><br>
     <div style = "text-align: left; display:inline-block; width:50px">ATK：</div><input type = "number" id = "ATK">
     <br>
